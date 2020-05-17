@@ -1,0 +1,6 @@
+ADD (x y) (MINUS x  (MINUS 0 y ))
+POS (v4) (IF v4 1)
+NEG (v6) (IF (MINUS 0 v6) 1)
+IF/THEN/ELSE (v7 v8 v9) (ADD (IF v7 v8) (IF (MINUS 1 v7) v9))
+EQUAL (v2 v3) (MINUS (MINUS 1 (IF (MINUS v2 v3) 1)) (IF (MINUS v3 v2) 1))
+TIMES (v10 v11) (IF/THEN/ELSE v10 (ADD v11 (TIMES (MINUS v10 1) v11)) 0)
